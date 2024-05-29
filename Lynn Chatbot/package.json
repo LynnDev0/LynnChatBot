@@ -1,0 +1,49 @@
+{
+  "name": "lynnchatbot",
+  "version": "1.0.0",
+  "description": "A simple lynndev chat application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/material": "^5.15.18",
+    "axios": "^0.27.2",
+    "electron-store": "^8.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "socket.io-client": "^4.7.5"
+  },
+  "devDependencies": {
+    "electron": "^20.3.12",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.lynnchatbot.app",
+    "productName": "Lynn Chatbot",
+    "directories": {
+      "output": "build"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "icons/lynndev.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "icons/lynndev.ico"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "icon": "icons/lynndev.ico"
+    }
+  },
+  "author": "LynnDev",
+  "license": "LynnDev"
+}
